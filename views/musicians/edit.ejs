@@ -1,0 +1,20 @@
+<%- include('../partials/headAndNav') %>
+
+<Form class="form" method="POST" action="/musicians/<%= edit._id%>?_method=PUT">
+    <div>
+        <label for="name">New name</label>
+        <input type="text" name="name" value=<%= edit.name%> id="name">
+    </div>
+    <div>
+        <label for="image">Enter the url for the image</label>
+        <input type="text" name="img" value= <%= edit.img%> id="image">
+    </div>
+    <div>
+        <label for="instrument">What instrument are they holding?</label>
+        <input type="text" name="instrument" value= <%= edit.instrument%> id="instrument">
+    </div>
+    <input type="submit" value="Submit new artist">
+</Form>
+
+
+<%- include('../partials/footer') %>
